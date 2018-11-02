@@ -1,0 +1,8 @@
+"""Klavyeden girilen Celcius sıcaklık değerini Fahrenheit'a çeviren programı yazınız."""
+
+
+cel = float(input("celcius cinsinden derecenizi girin =="))
+
+F = cel*1.8 + 32
+
+print("Fahrenheit'e çevrilmiş hali:" , F)
