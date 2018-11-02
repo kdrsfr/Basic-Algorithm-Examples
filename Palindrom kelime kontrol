@@ -1,0 +1,15 @@
+a = input("kelime giriniz:")
+x = len(a)
+b = ""
+for i in range(len(a)):
+    if x < 0:
+        break
+    x -= 1
+    b += a[x]
+
+if a == b:
+    print("Bu bir palindromdur")
+
+else:
+    print("Palindrom değildir.")
+
