@@ -1,0 +1,9 @@
+
+toplam = 0
+while True:
+    a = int(input("sayiyi giriniz:"))
+    toplam += a
+    if a == 15:
+        toplam -= 15
+        break
+print(toplam)
