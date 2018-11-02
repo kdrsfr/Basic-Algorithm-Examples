@@ -1,0 +1,12 @@
+"""Klavyeden girilen sayının faktöriyel değerini hesaplayan programı yazınız."""
+faktoriyel = 1
+a = int(input("Faktöriyelini hesaplamak istediğiniz sayiyi giriniz :"))
+
+if a > 0:
+    for i in range(1, a+1):
+        faktoriyel *= i
+
+else:
+    print("0 ya da negatif sayi giremezsiniz.")
+
+print(faktoriyel)
