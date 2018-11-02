@@ -1,0 +1,20 @@
+
+toplam = 0
+dizi = []
+while True:
+    a = input("Değeri giriniz. Durmak için 'dur' yaziniz" "\n")
+
+    if a == 'dur':
+        print("En büyük sayi:", max(dizi))
+        print("En kücük sayi:", min(dizi))
+        print("toplamlari", toplam)
+        print("Sayilarin ortalamasi:", ort)
+        break
+
+    elif a != 'dur':
+        b = int(a)
+        toplam += b
+        dizi.append(b)
+        ort = toplam / b
+
+
