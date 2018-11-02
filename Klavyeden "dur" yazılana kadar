@@ -1,0 +1,16 @@
+print("sayi giriniz" "\n" "durmak için dur yaziniz")
+toplam = 0
+userinput = 0
+while True:
+    userinput = input("sayi:")
+
+    if userinput == 'dur':
+        break
+
+    elif userinput != 'dur':
+        val = int(userinput)
+        toplam += val
+
+
+
+print(toplam)
