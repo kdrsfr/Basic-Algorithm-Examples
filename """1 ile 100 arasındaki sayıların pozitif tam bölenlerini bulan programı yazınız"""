@@ -1,0 +1,10 @@
+dizi = []
+x = 0
+for i in range (1,100):
+
+    while x <= i:
+        x += 1
+        if i % x == 0:
+            dizi.append(x)
+    print(dizi)
+
