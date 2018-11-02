@@ -1,0 +1,9 @@
+basamak = 0
+
+a = int(input("Basamagi hesaplanacak sayiyi giriniz"))
+while a > 0:
+    basamak +=1
+    a //= 10
+
+print("basamak sayisi... : {}".format(basamak))
+
