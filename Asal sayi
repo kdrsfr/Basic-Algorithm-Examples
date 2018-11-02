@@ -1,0 +1,7 @@
+for i in range(1, 1000):
+    bolunme = False
+    for b in range(2, i):
+        if i % b == 0:
+            bolunme = True
+    if not bolunme:
+        print(i)
