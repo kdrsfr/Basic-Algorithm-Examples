@@ -1,0 +1,18 @@
+import random
+
+tekdizi = []
+ciftdizi = []
+b = 0
+c = int(input("Kaç deneme yapilsin? (maks: 200)" "\n"))
+while b < c:
+    a = random.randint(150,350)
+
+    if a % 2 == 0:
+        ciftdizi.append(a)
+
+    elif a % 2 != 0:
+        tekdizi.append(a)
+    b += 1
+
+print("cift sayilar kümesi:", ciftdizi)
+print("tek sayilar kümesi:", tekdizi)
