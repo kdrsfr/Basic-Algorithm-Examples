@@ -1,0 +1,7 @@
+a = int(input("Bir sayi giriniz"))
+
+if a >= 50:
+    print(a*10//100)
+
+else:
+    print(a*25//100)
