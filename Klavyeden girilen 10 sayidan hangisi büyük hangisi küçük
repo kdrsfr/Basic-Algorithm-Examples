@@ -1,0 +1,12 @@
+dizi = []
+b = 0
+c = 10
+while b < 10:
+    a = int(input("10 adet sayi giriniz(kalan {}) :".format(c)))
+    c -= 1
+    dizi.append(a)
+
+    b += 1
+
+print("en küçük sayi:", min(dizi))
+print("en büyük sayi:", max(dizi))
