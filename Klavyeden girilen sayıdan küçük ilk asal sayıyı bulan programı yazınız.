@@ -1,0 +1,14 @@
+
+a = int(input("sayiyi giriniz:"))
+
+while a > 2:
+    bolunme = False
+    a -= 1
+
+    for b in range(2,a):
+        if a % b == 0:
+            bolunme = True
+    if not bolunme:
+        print(a)
+        break
+
