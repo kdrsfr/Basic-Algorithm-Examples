@@ -1,0 +1,12 @@
+a = int(input("1. sayiyi giriniz:"))
+b = int(input("2. sayiyi giriniz:"))
+c = int(input("3. sayiyi giriniz:"))
+
+if a > b and a > c:
+    print("En büyük sayi", a)
+
+elif b > a and b > c:
+    print("En büyük sayi", b)
+
+else:
+    print("En büyük sayi", c)
