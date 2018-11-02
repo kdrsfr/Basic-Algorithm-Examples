@@ -1,0 +1,14 @@
+"""int türden bir dizinin elemanlarını tekler ve çiftler olmak üzere ayrı ayrı yazan programı yazınız."""
+
+dizi = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+tekdizi = []
+ciftdizi = []
+
+for x in dizi:
+    if x % 2 == 0:
+        ciftdizi.append(x)
+
+    elif x % 2 != 0:
+        tekdizi.append(x)
+print("tekdizi :" , tekdizi)
+print("ciftdizi:", ciftdizi)
