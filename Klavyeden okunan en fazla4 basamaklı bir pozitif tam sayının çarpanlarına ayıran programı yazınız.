@@ -1,0 +1,7 @@
+a = int(input("sayi gir:"))
+if 0 < a < 10000:
+    for i in range(1,a):
+        if a % i == 0:
+            print(i)
+else:
+    print("en fazla 4 basamak!")
