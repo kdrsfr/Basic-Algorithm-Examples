@@ -1,0 +1,23 @@
+"""2 basamaklı birbirinden farklı 3 asal sayının toplamı şeklinde ifade edilebilecek
+en büyük ve en küçük asal sayıları bulan programı yazınız."""
+
+dizi = []
+for i in range(2,100):
+    bolunme = False
+    for b in range(2,i):
+        if i%b == 0:
+            bolunme = True
+
+    if not bolunme:
+        dizi.append(i)
+        print(i)
+        
+"""önce diziyi küçükten büyüğe sıralayıp ilk 3 veriyi topladık bu bize en küçüğü verecek."""
+
+dizi.sort()
+print("en küçük sayilar:",dizi[0]+ dizi[1] + dizi[2])
+
+"""daha sonra büyükten küçüğe sıralayıp ilk 3 veriyi aldık bu bize en büyüğü verecek."""
+
+dizi.sort(reverse=True)
+print("en büyük sayilar:",dizi[0]+ dizi[1] + dizi[2])
