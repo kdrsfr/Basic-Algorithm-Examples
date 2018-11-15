@@ -1,0 +1,19 @@
+sayi = int(input("sayi gir:"))
+dizi = []
+toplam = 0
+
+"""sayiya kadar dönüyor ve bölünenleri diziye atıyor. Bu bölünenlerin hepsini bir arada tutmamız için gerekli."""
+for x in range(1,sayi):
+    if sayi % x == 0:
+        dizi.append(x)
+        
+"""diziye atılanları topladık"""
+for b in dizi:
+    toplam += b
+
+"""toplam ile girişte verilen sayıyı karşılaştırdık"""
+if toplam == sayi:
+    print("sayi mükemmel sayidir")
+
+else:
+    print("değildir")
