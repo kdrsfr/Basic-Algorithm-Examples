@@ -1,4 +1,5 @@
-# cümleyi tersten yazdırır
+# cümleyi tersten yazdırır-------------------------------------
+
 a = input("cümle")
 dizi = a.split(" ")
 b = " "
@@ -6,14 +7,16 @@ for i in range(1, len(dizi)+1):
     b += dizi[-i]+ " "
 print("cümlenin tersi:", b , "\n")
 
-#cümlenin kelimeleri
+#cümlenin kelimeleri-------------------------------------
+
 print("cümlenin kelimeleri:",)
 dizi = a.split(" ")
 for i in range(len(dizi)):
     print(dizi[i])
 print("\n")
 
-#cümlede ki harf sayisi
+#cümlede ki harf sayisi-------------------------------------
+
 harf = []
 sayi = []
 for i in a:
@@ -26,7 +29,27 @@ for i in a:
 print("Harf --- sayi")
 for x in range(len(harf)):
     print(harf[x], "--", sayi[x])
+print("\n")
 
-#cümlenin tersi
+#cümlenin tersi-------------------------------------
 
 print("Cümlenin tersi:","\n", a[::-1])
+print("\n")
+
+#ünlü ünsüz harfleri ayıran-------------------------------------
+ünlüler = ["a", "e", "i", "ı", "o", "ö", "u", "ü"]
+ünsüzler = ["b", "c", "ç", "d", "f", "g", "ğ", "h", "j", "k", "l", "m", "n", "p", "r", "s", "ş", "t", "v", "y", "z"]
+ünlüsys = []
+ünsüzsys = []
+for i in a:
+    for b in ünlüler:
+        if i == b:
+            ünlüsys.append(i)
+            break
+
+    for c in ünsüzler:
+        if i == c:
+            ünsüzsys.append(i)
+            
+print("ünlü harfler:",ünlüsys)
+print("ünsüz harfler:",ünsüzsys)
