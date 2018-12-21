@@ -1,0 +1,20 @@
+dosya = open("C:/sinav/ogrencino_sonuc","w")
+dizi = []
+
+s1 = int(input("sayi"))
+s2 = int(input("sayi"))
+s3 = int(input("sayi"))
+s4 = int(input("sayi"))
+s5 = int(input("sayi"))
+
+dizi.append(s1)
+dizi.append(s2)
+dizi.append(s3)
+dizi.append(s4)
+dizi.append(s5)
+
+dizi.sort(reverse=True)
+for i in dizi:
+    dosya.write(str(i))
+    dosya.write(" ")
+
