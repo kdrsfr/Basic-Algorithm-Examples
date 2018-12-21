@@ -1,0 +1,9 @@
+# cümleyi tersten yazdırır
+a = input("cümle")
+dizi = a.split(" ")
+b = " "
+for i in range(1, len(dizi)+1):
+    b += dizi[-i]+ " "
+print(b)
+
+
