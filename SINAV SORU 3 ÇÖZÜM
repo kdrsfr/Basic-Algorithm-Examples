@@ -1,0 +1,5 @@
+b = 0
+for i in range(1001):
+    b+=i**i
+    c = str(b)
+print((c[-10:]))
