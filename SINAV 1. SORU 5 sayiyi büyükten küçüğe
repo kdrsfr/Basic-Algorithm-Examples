@@ -1,6 +1,7 @@
 dosya = open("C:/sinav/ogrencino_sonuc","w")
 dizi = []
 
+#for her döndüğünde s1 adlı değişkeni yeniden tanımladığımız için 5 kere input komutu yazmaktan ve onu listelemekten çok daha basit ve işlevseldir.
 for i in range(5):
     s1 = int(input("gir"))
     dizi.append(s1)
