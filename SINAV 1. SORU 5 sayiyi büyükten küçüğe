@@ -1,17 +1,9 @@
 dosya = open("C:/sinav/ogrencino_sonuc","w")
 dizi = []
 
-s1 = int(input("sayi"))
-s2 = int(input("sayi"))
-s3 = int(input("sayi"))
-s4 = int(input("sayi"))
-s5 = int(input("sayi"))
-
-dizi.append(s1)
-dizi.append(s2)
-dizi.append(s3)
-dizi.append(s4)
-dizi.append(s5)
+for i in range(5):
+    s1 = int(input("gir"))
+    dizi.append(s1)
 
 dizi.sort(reverse=True)
 for i in dizi:
