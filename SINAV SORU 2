@@ -1,5 +1,5 @@
-# update: Maddeler fonksiyonlara ayrıldı. 
-          Artık aynı ünlü kelimeler ya da ünsüz kelimeler aynı dizine iki kere atılmıyor.
+""" update: Maddeler fonksiyonlara ayrıldı. 
+          Artık aynı ünlü kelimeler ya da ünsüz kelimeler aynı dizine iki kere atılmıyor."""
 # cümleyi tersten yazdırır-------------------------------------
 def terscümle(a):
     dizi = a.split(" ")
