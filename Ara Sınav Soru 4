@@ -1,0 +1,17 @@
+"soruyu çözmek için yardım aldım."
+
+" 'set' fonksiyonu bir veri tipini basamaklarına ayrıştırmaya yarar."
+
+ """"x'in o anki değerini string formatına çevirip set fonksiyonu
+     ile basamklarına ayırdıktan sonra x'in katlarının basamaklarıyla karşılaştırıyoruz
+     eğer 6. kat dahil olmak üzere dizideki sıralanmış rakamlar birbirine
+     eşitse sonucu yazdırıp döngüyü kırıyoruz."""
+
+x = 125874
+while True:
+    x += 1
+    if sorted(set(str(x))) == sorted(set(str(x * 2))) == \
+        sorted(set(str(x * 3))) == sorted(set(str(x * 4))) == \
+            sorted(set(str(x * 5))) == sorted(set(str(x * 6))):
+        print (x)
+        break
