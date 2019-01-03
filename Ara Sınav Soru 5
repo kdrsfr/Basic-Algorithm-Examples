@@ -1,0 +1,25 @@
+""" İlk 2 denklemin sonuçlarını ayrı dizilere attık. 2. ve 3. for dönerken bir önceki diziyi kontrol ettik. 
+Hepsi eşitlendikten sonra forları durdurduk. Eşitlenen sayının aclas dizisinin hangi basamağında olduğunu bulmak için
+aa ile eşitlenmiş olan bb'yi baz alarak index fonksiyonunu kullandık ve sonuca ulaştık."""
+
+""" Forlar 0'dan başlatılırsa break komutlarının kaldırılmasını öneririm aksi halde sonuç yanlış çıkacaktır. Yüksek bir sayıdan
+başlatılma sebebi; Kod bloğunun fazla uzun süre çalışmamasını sağlamak içindir."""
+
+aclas = []
+bclas = []
+for n in range(20000,60000):
+    aa = n*(n+1)//2
+    aclas.append(aa)
+
+for nn in range(30000,40000):
+    bb = nn*(3*nn-1)//2
+    bclas.append(bb)
+    if bb in aclas:
+        break
+
+for nnn in range(20000,30000):
+    cc = nnn*(2*nnn-1)
+    if cc in bclas:
+        break
+
+print("A",aclas.index(bb), "=", "B", nn , "=" , "C" , nnn, "=" ,cc)
