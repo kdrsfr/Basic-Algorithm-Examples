@@ -5,7 +5,9 @@
  """"x'in o anki değerini string formatına çevirip set fonksiyonu
      ile basamklarına ayırdıktan sonra x'in katlarının basamaklarıyla karşılaştırıyoruz
      eğer 6. kat dahil olmak üzere dizideki sıralanmış rakamlar birbirine
-     eşitse sonucu yazdırıp döngüyü kırıyoruz."""
+     eşitse sonucu yazdırıp döngüyü kırıyoruz.
+     
+      sorted(set(str(x))) == En iç parantezden başlıyoruz ve şu anlama geliyor; x'in string haline çevrimliş, basamaklarına ayrılmış ve küçükten büyüğe sıralanmış hali."""
 
 x = 125874
 while True:
