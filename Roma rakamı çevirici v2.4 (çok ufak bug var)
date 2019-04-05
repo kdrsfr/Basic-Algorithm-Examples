@@ -2,11 +2,9 @@ from tkinter import *
 from tkinter import messagebox
 roman = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
 decimal = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
-
-
 def alinanmetin():
     def dec2roman(number):
-        if 1 <= number <= 3999:
+        if 1 <= number <= 3999: #sayi 1 ila 3999 arasındaysa çalışsın
             romanvalue = ("")
             if type(number) == float:
                 integer, fractor = str(number).split('.')
@@ -22,25 +20,28 @@ def alinanmetin():
                     number -= d
                     romanvalue += roman[i]
             return (romanvalue)
-        else:
-
+        else: #sayi 1 ila 3999 arasında değilse uyarsın
             messagebox.showinfo("Mesaj Baslik", "1 ila 3999 arası sayı gir")
 
-    il=giris.get()
-    messagebox.showinfo("Mesaj Baslik", dec2roman(int(il))) #il değişkenini printledik
+    il=giris.get() #inputun değişkeni olan "giris"i  daha sonra kullanmak için "il" adlı değişkene attık.
 
-anapencere=Tk()
+    try: #sayi yerine harf girilirse uyarsın
+        messagebox.showinfo("Mesaj Baslik", dec2roman(int(il))) #il değişkenini printledik
+    except ValueError:
+        messagebox.showinfo("Mesaj Baslik", "Sadece sayi giriniz.")
+
+anapencere=Tk() #ana pencerenin boyutu, texti vs
 anapencere.geometry("250x250")
 yazi=Label(anapencere)
 yazi.config(text="1-3999 arası bir sayı giriniz")
 yazi.pack()
 
-giris=Entry(anapencere)
+giris=Entry(anapencere) #input girmek için açılan kısım
 giris.pack()
 
-buton=Button(anapencere)
-buton.config(text="Uygula Görelim!")
-buton.config(command=alinanmetin)
+buton=Button(anapencere) #Buton
+buton.config(text="Çevir!")
+buton.config(command=alinanmetin) #Butona basıldığında çağırılacak fonksiyon
 buton.pack()
 
 anapencere.mainloop()
