@@ -3,7 +3,7 @@ from tkinter import messagebox
 roman = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
 decimal = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
 def alinanmetin():
-    def dec2roman(number):
+    def dec2roman(number): #Fonksiyon internetten alınıp python3'e ve gui'ye uyarlanmıştır
         if 1 <= number <= 3999: #sayi 1 ila 3999 arasındaysa çalışsın
             romanvalue = ("")
             if type(number) == float:
