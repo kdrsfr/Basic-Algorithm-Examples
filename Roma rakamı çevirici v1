@@ -1,0 +1,46 @@
+from tkinter import *
+from tkinter import messagebox
+roman = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
+decimal = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+
+
+def alinanmetin():
+    def dec2roman(number):
+        if 1 <= number <= 3999:
+            romanvalue = ("")
+            if type(number) == float:
+                integer, fractor = str(number).split('.')
+                integer = int(integer)
+                while len(fractor) > 3:
+                    fra = list(fractor)
+                    fra.pop()
+                    fractor = ("".join(fra))
+                fractor = int(fractor)
+                return dec2roman(integer) + ('.') + dec2roman(fractor)
+            for i, d in enumerate(decimal):
+                while (number >= d):
+                    number -= d
+                    romanvalue += roman[i]
+            return (romanvalue)
+        else:
+
+            messagebox.showinfo("Mesaj Baslik", "1 ila 3999 arası sayı gir")
+
+    il=giris.get()
+    messagebox.showinfo("Mesaj Baslik", dec2roman(int(il))) #il değişkenini printledik
+
+anapencere=Tk()
+anapencere.geometry("250x250")
+yazi=Label(anapencere)
+yazi.config(text="1-3999 arası bir sayı giriniz")
+yazi.pack()
+
+giris=Entry(anapencere)
+giris.pack()
+
+buton=Button(anapencere)
+buton.config(text="Uygula Görelim!")
+buton.config(command=alinanmetin)
+buton.pack()
+
+anapencere.mainloop()
