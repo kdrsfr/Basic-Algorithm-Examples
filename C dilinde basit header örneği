@@ -1,0 +1,64 @@
+#include <stdio.h>
+void power(int a, int b){
+	int i,sonuc = 1;
+	for(i = 0; i < b; i++){ //2. girilen sayı kadar dönecek 
+		sonuc *= a; // sonuc sürekli a ile çarpılıp üs alınacak
+	}
+	printf("%d",sonuc);
+}
+void abs(int mutlak){
+	if(mutlak < 0){
+		mutlak = mutlak * -1; //sayıyı -1 ile çartım 
+	}
+	printf("%d",mutlak);
+}
+void sum(int baslangic, int bitis){
+	int don;
+	int toplam=0;
+	for(don = baslangic; don <= bitis; don++){ //for ilk degere esitleniyor ve ikinci girilen sayıya kadar dönüyor.
+		toplam += don; //For her döndüğünde o an ki değer toplam ile tutuluyor
+	}
+	printf("%d \n",toplam);
+}
+void fibonacci(int n){
+	int ilksayi=0,ikincisayi=1,toplam,donbakalim;
+	for(donbakalim = 1; donbakalim < n; donbakalim++){ //girilen sayı kadar dönüyor
+		toplam = ilksayi + ikincisayi; // toplam her zaman ilksayı ve ikinci sayiya eşit  yani başta fibonaccinin ilk sayıları olan 0 ve 1'e.
+		ilksayi = ikincisayi; //ilk sayi her zaman ikinci sayıya eşitleniyor böylece ilk sayı her zaman bir sonraki sayıyı takip edecek
+		ikincisayi = toplam; // ikinci sayı her zaman toplama eşit olacak böylece serinin son sayısı ikinci sayı olacak.
+	}
+	printf("%d",toplam);
+}
+void factorial(int kacfaktoryel){
+	
+	
+	
+	int fordon,toplamm=1;
+	for(fordon = kacfaktoryel; fordon > 1;fordon--){ //girilen sayıdan 1 e kadar azala azala dönecek
+		toplamm *= fordon; //toplamm değişkeni ile fordon çarpılıp toplamm değişkenine aktarılacak
+	}
+	printf("%d",toplamm);
+}
+void toUpper(char ch){
+	printf("%c",ch-32); //ascii kodlarında büyük sayılar 32 sayı küçüğüne tekabül eder
+}
+void toLower(char ch2){
+	printf("%c",ch2+32); //ascii kodlarında küçük sayılar 32 sayı büyüğüne tekabül eder
+}
+int isPrime(int n){
+	int asaldongu, sayac =0; //dongu icin değişken oluşturduk ve bolunup bolunmediğini anlamak için sayaç koyduk
+	for(asaldongu = 2; asaldongu < n; asaldongu++){ //2den başlayıp n kadar dönecek
+		if(n%asaldongu == 0){ // eğer n forun herhangi bir anında bölünürse sayaç artacak
+			sayac++;
+		}
+	}
+	if(sayac == 0){ //sayaç hiç artmazsa 1 değerini döndürecek
+		return 1;
+	}
+	else{
+		return 0; //sayaç artarsa yani sayı bölünmüşse 0 değerini döndürecek
+	}
+}
+
+
+
